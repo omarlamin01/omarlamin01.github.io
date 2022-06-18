@@ -17,17 +17,19 @@
 
 header {
     height: 100vh;
+    background:  linear-gradient(to bottom, #d59254, #cf7693);
 }
 
 header nav {
     height: 80px;
+    z-index: 5;
     position: sticky;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: var(--main-color-3);
+    background-color: #0a192f;
 }
 
 header nav #logo a {
@@ -71,6 +73,29 @@ header nav #links ul li a {
     color: white;
 }
 
+header button {
+    background-color: transparent;
+    border: solid 2px var(--main-color-1);
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: var(--main-color-1);
+}
+
+header button:hover a {
+    color: #0a192f;
+    font-weight: bold;
+}
+
+header button a {
+    font-size: 20px;
+    font-family: var(--main-font);
+    color: var(--main-color-1);
+}
+
 .right {
     left: auto;
     right: 20px;
@@ -78,7 +103,18 @@ header nav #links ul li a {
     position: fixed;
     bottom: 0px;
     z-index: 10;
+    color: #a8b2d1;
+}
+
+.right:hover .email a {
     color: var(--main-color-1);
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.15em;
+}
+
+.right:hover::after {
+    background-color: var(--main-color-1);
 }
 
 .email {
@@ -101,15 +137,15 @@ header nav #links ul li a {
     display: inline-block;
     text-decoration: none;
     text-decoration-skip-ink: auto;
-    color: #a8b2d1;
+    color: inherit;
     position: relative;
-    transition: var(--transition);
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
 }
 
 .email::after {
     content: "";
     display: block;
-    width: 1px;
+    width: 2px;
     height: 90px;
     margin: 0px auto;
     background-color: #a8b2d1;
@@ -139,10 +175,16 @@ header nav #links ul li a {
 .socials li {
     display: list-item;
     text-align: -webkit-match-parent;
+    margin-top: 3px;
 }
 
 .socials li:last-of-type {
     margin-bottom: 20px;
+}
+
+.socials li:hover {
+    color: var(--main-color-1);
+    transform: translateY(-3px);
 }
 
 .socials li a {
@@ -163,8 +205,12 @@ header nav #links ul li a {
 .socials::after {
     content: "";
     display: block;
-    width: 1px;
+    width: 2px;
     height: 90px;
     margin: 0px auto;
     background-color: #a8b2d1;
+}
+
+section {
+    height: 100vh;
 }
