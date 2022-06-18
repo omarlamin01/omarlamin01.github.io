@@ -72,21 +72,99 @@ header nav #links ul li a {
 }
 
 .right {
-    position: fixed;
-    z-index: 10;
-    transform: rotate(90deg);
-    right: 10px;
     left: auto;
-    bottom: 200px;
-    top: auto;
+    right: 20px;
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 10;
+    color: var(--main-color-1);
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+}
+
+.email a {
+    margin: 20px auto;
+    padding: 10px;
+    font-family: var(--main-font);
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: #a8b2d1;
+    position: relative;
+    transition: var(--transition);
+}
+
+.email::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #a8b2d1;
 }
 
 .left {
-    position: fixed;
-    z-index: 10;
-    transform: rotate(90deg);
-    left: 10px;
+    left: 20px;
     right: auto;
-    bottom: 200px;
-    top: auto;
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    z-index: 10;
+    color: var(--main-color-1);
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    color: #a8b2d1;
+}
+
+.socials li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.socials li:last-of-type {
+    margin-bottom: 20px;
+}
+
+.socials li a {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    padding: 8px;
+}
+
+.socials li a svg {
+    width: 20px;
+    height: 20px;
+}
+
+.socials::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0px auto;
+    background-color: #a8b2d1;
 }
