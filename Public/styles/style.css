@@ -1,0 +1,21 @@
+:root {
+    --main-font: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --main-color-1: #64ffda;
+    --main-color-2: #3F7369;
+    --main-color-3: #627370;
+    --main-color-4: #D0F5EE;
+    --main-color-5: #69BFAF;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: var(--main-font);
+}
+
+header {
+    height: 100vh;
+    background: linear-gradient(#80FF72,#7EE8FA);
+}
