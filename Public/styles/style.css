@@ -17,5 +17,76 @@
 
 header {
     height: 100vh;
-    background: linear-gradient(#80FF72,#7EE8FA);
+}
+
+header nav {
+    height: 80px;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: var(--main-color-3);
+}
+
+header nav #logo a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+
+header nav #logo span {
+    margin: 20px;
+}
+
+header nav #links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+header nav #links ul {
+    list-style: decimal-leading-zero;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+    padding: 0;
+    color: var(--main-color-1);
+}
+
+header nav #links ul li {
+    margin: 0 16px;
+}
+
+header nav #links ul li a {
+    color: white;
+}
+
+.right {
+    position: fixed;
+    z-index: 10;
+    transform: rotate(90deg);
+    right: 10px;
+    left: auto;
+    bottom: 200px;
+    top: auto;
+}
+
+.left {
+    position: fixed;
+    z-index: 10;
+    transform: rotate(90deg);
+    left: 10px;
+    right: auto;
+    bottom: 200px;
+    top: auto;
 }
