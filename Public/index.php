@@ -34,6 +34,22 @@ require "import_setting.php";
                 </button>
             </div>
         </nav>
+            <div class="hello">
+                <div style="transition-delay: 100ms;">
+                    <h3 class="intro">Hello world! my name is</h3>
+                </div>
+                <div style="transition-delay: 200ms;">
+                    <h2 class="my-name">Lamine Omar</h2>
+                </div>
+                <div style="transition-delay: 300ms;">
+                    <h1 class="job">I'm a Full Stack Developper.</h1>
+                </div>
+                <div style="transition-delay: 400ms;">
+                    <p>
+                        currently I study computer science in Ibn Zohr University, I'm looking forward to start a career in web developpement.
+                    </p>
+                </div>
+            </div>
     </header>
     <div orientation="right" class="right">
         <div class="email">
