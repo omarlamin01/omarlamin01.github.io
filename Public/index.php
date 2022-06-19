@@ -34,22 +34,22 @@ require "import_setting.php";
                 </button>
             </div>
         </nav>
-            <div class="hello">
-                <div style="transition-delay: 100ms;">
-                    <h3 class="intro">Hello world! my name is</h3>
-                </div>
-                <div style="transition-delay: 200ms;">
-                    <h2 class="my-name">Lamine Omar</h2>
-                </div>
-                <div style="transition-delay: 300ms;">
-                    <h1 class="job">I'm a Full Stack Developper.</h1>
-                </div>
-                <div style="transition-delay: 400ms;">
-                    <p>
-                        currently I study computer science in Ibn Zohr University, I'm looking forward to start a career in web developpement.
-                    </p>
-                </div>
+        <div class="hello">
+            <div style="transition-delay: 100ms;">
+                <h3 class="intro">Hello world! my name is</h3>
             </div>
+            <div style="transition-delay: 200ms;">
+                <h2 class="my-name">Lamine Omar</h2>
+            </div>
+            <div style="transition-delay: 300ms;">
+                <h1 class="job">I'm a Full Stack Developper.</h1>
+            </div>
+            <div style="transition-delay: 400ms;">
+                <p>
+                    currently I study computer science in Ibn Zohr University, I'm looking forward to start a career in web developpement.
+                </p>
+            </div>
+        </div>
     </header>
     <div orientation="right" class="right">
         <div class="email">
@@ -109,7 +109,29 @@ require "import_setting.php";
             </li>
         </ul>
     </div>
-    <section id="about"></section>
+    <section id="about">
+        <div class="container">
+            <h2 class="numbered-heading">About Me</h2>
+            <div class="inner">
+                <div>
+                    <div>
+                        <p>Hello! My name is <a href="http://www.thinkbabynames.com/meaning/1/Omar" target="_blank">Omar</a> and I enjoy creating things that live on the internet. My interest in web development started back in 2012 when I decided to try editing custom Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML &amp; CSS!</p>
+                        <p>Fast-forward to today, and I’ve had the privilege of working at <a href="https://us.mullenlowe.com/" rel="noopener noreferrer" target="_blank">an advertising agency</a>, <a href="https://starry.com/" rel="noopener noreferrer" target="_blank">a start-up</a>, <a href="https://www.apple.com/" rel="noopener noreferrer" target="_blank">a huge corporation</a>, and <a href="https://scout.camd.northeastern.edu/" rel="noopener noreferrer" target="_blank">a student-led design studio</a>. My main focus these days is building accessible, inclusive products and digital experiences at <a href="https://upstatement.com/" rel="noopener noreferrer" target="_blank">Upstatement</a> for a variety of clients.</p>
+                        <p>I also recently <a href="https://www.newline.co/courses/build-a-spotify-connected-app" rel="noopener noreferrer" target="_blank">launched a course</a> that covers everything you need to build a web app with the Spotify API using Node &amp; React.</p>
+                        <p>Here are a few technologies I’ve been working with recently:</p>
+                    </div>
+                    <ul class="skills-list">
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>Java</li>
+                        <li>MySQL</li>
+                        <li>Node.js</li>
+                        <li>WordPress</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="work"></section>
     <section id="contact"></section>
     <footer></footer>

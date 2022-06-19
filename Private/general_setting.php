@@ -6,7 +6,7 @@
     //Socials links
     $github = "https://github.com/omarlamin01";
     $instagram = "https://instagram.com/omarlamin01";
-    $linkedin = "https://linkedin.com/in/https://www.linkedin.com/in/omar-lamine-267333198/";
+    $linkedin = "https://www.linkedin.com/in/omar-lamine-267333198/";
     $stackoverflow = "https://stackoverflow.com/users/19355123";
     $codepen = "https://codepen.io/omarlamin01";
     $proemail = "contactomarlamine1@gmail.com";

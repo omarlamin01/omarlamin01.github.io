@@ -1,10 +1,11 @@
 :root {
     --main-font: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
     --main-color-1: #64ffda;
-    --main-color-2: #3F7369;
-    --main-color-3: #627370;
+    --main-color-2: #ee7752;
+    --main-color-3: #e73c7e;
     --main-color-4: #0a192f;
-    --main-color-5: #69BFAF;
+    --main-color-5: #23a6d5;
+    --main-color-6: #23d5ab;
 
 }
 
@@ -279,4 +280,77 @@ section {
     font-size: 20px;
     max-width: 540px;
     color: var(--main-color-4);
+}
+
+/*--------------------------------------------*/
+
+section .container {
+    max-width: 900px;
+    padding: 100px 0;
+    margin: 0 auto;
+}
+
+section p {
+    margin-top: 20px;
+    font-size: 20px;
+    max-width: 540px;
+    color: var(--main-color-4);
+}
+
+section a {
+    color: var(--main-color-1);
+}
+
+.numbered-heading {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 0px 40px;
+    width: 100%;
+    font-size: 32px;
+    white-space: nowrap
+}
+
+.numbered-heading::before {
+    position: relative;
+    bottom: 4px;
+    counter-increment: section 1;
+    content: "0" counter(section) ".";
+    margin-right: 10px;
+    color: var(--main-color-1);
+    font-family: var(--main-font);
+    font-size: 32px;
+    font-weight: 400;
+}
+
+#about {
+    background-color: var(--main-color-3);
+}
+
+#about .skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: none
+}
+
+#about .skills-list li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: var(--main-font);
+    font-size: 13px;
+}
+
+#about .skills-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: var(--main-color-1);
+    font-size: 16px;
+    line-height: 12px;
 }
