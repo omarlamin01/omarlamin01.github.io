@@ -101,6 +101,11 @@ header button {
     cursor: pointer;
 }
 
+header button a {
+    height: 100%;
+    width: 100%;
+}
+
 header button:hover {
     background-color: var(--main-color-1);
 }
@@ -130,10 +135,9 @@ header button a {
     color: var(--main-color-4);
     font-size: 12px;
     line-height: 18px;
-    letter-spacing: 0.15em;
 }
 
-.right:hover::after {
+.right:hover > ::after {
     background-color: var(--main-color-4);
 }
 
@@ -205,6 +209,10 @@ header button a {
 .socials li:hover {
     color: var(--main-color-4);
     transform: translateY(-3px);
+}
+
+.socials li:hover > .socials::after {
+    background-color: var(--main-color-4);
 }
 
 .socials li a {
@@ -309,7 +317,8 @@ section a {
     margin: 10px 0px 40px;
     width: 100%;
     font-size: 32px;
-    white-space: nowrap
+    white-space: nowrap;
+    counter-reset: section 0;
 }
 
 .numbered-heading::before {
@@ -326,6 +335,14 @@ section a {
 
 #about {
     background-color: var(--main-color-3);
+}
+
+#work {
+    background-color: var(--main-color-5);
+}
+
+#contact {
+    background-color: var(--main-color-2);
 }
 
 #about .skills-list {
@@ -353,4 +370,48 @@ section a {
     color: var(--main-color-1);
     font-size: 16px;
     line-height: 12px;
+}
+
+#contact .container {
+    max-width: 600px;
+    margin: 0px auto 100px;
+    text-align: center;
+}
+
+#contact .container .overline {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--main-color-1);
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#contact .container .email-link {
+    background-color: transparent;
+    border: solid 2px var(--main-color-1);
+    border-radius: 5px;
+    cursor: pointer;
+    color: var(--main-color-1);
+    padding: 1.25rem 1.75rem;
+    font-size: 16px;
+    font-weight: bolder;
+    font-family: var(--main-font);
+    line-height: 1;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    margin-top: 50px;
+}
+
+#contact .container .email-link:hover {
+    background-color: var(--main-color-1);
+}
+
+#contact .container .email-link:hover > a {
+    color: var(--main-color-2);
+}
+
+#contact p {
+    max-width: 100%;
+    width: auto;
 }
