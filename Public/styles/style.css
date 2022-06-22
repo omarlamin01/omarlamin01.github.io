@@ -211,10 +211,6 @@ header button a {
     transform: translateY(-3px);
 }
 
-.socials li:hover > .socials::after {
-    background-color: var(--main-color-4);
-}
-
 .socials li a {
     display: inline-block;
     text-decoration: none;
@@ -237,6 +233,10 @@ header button a {
     height: 90px;
     margin: 0px auto;
     background-color: #a8b2d1;
+}
+
+.left:hover > ::after {
+    background-color: var(--main-color-4);
 }
 
 section {
@@ -323,13 +323,11 @@ section a {
 
 .numbered-heading::before {
     position: relative;
-    bottom: 4px;
     counter-increment: section 1;
     content: "0" counter(section) ".";
     margin-right: 10px;
     color: var(--main-color-1);
     font-family: var(--main-font);
-    font-size: 32px;
     font-weight: 400;
 }
 
@@ -414,4 +412,8 @@ section a {
 #contact p {
     max-width: 100%;
     width: auto;
+}
+
+#contact .numbered-heading::before {
+    content: "03.";
 }
