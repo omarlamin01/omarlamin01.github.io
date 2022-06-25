@@ -1,5 +1,5 @@
 :root {
-    --main-font: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --main-font: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
     --main-color-1: #64ffda;
     --main-color-2: #ee7752;
     --main-color-3: #e73c7e;
@@ -21,6 +21,8 @@
     color: white;
 }
 
+/* Header */
+
 header {
     height: 100vh;
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
@@ -32,9 +34,11 @@ header {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }
@@ -121,6 +125,8 @@ header button a {
     color: var(--main-color-1);
 }
 
+/* Sides links */
+
 .right {
     left: auto;
     right: 20px;
@@ -137,7 +143,7 @@ header button a {
     line-height: 18px;
 }
 
-.right:hover > ::after {
+.right:hover> ::after {
     background-color: var(--main-color-4);
 }
 
@@ -163,7 +169,7 @@ header button a {
     text-decoration-skip-ink: auto;
     color: inherit;
     position: relative;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
 .email::after {
@@ -217,7 +223,7 @@ header button a {
     text-decoration-skip-ink: auto;
     color: inherit;
     position: relative;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     padding: 8px;
 }
 
@@ -235,7 +241,7 @@ header button a {
     background-color: #a8b2d1;
 }
 
-.left:hover > ::after {
+.left:hover> ::after {
     background-color: var(--main-color-4);
 }
 
@@ -258,7 +264,9 @@ section {
     max-width: 1000px;
 }
 
-.hello h1, h2, h3 {
+.hello h1,
+h2,
+h3 {
     margin: 0px 0px 10px;
     font-weight: 600;
     color: #ccd6f6;
@@ -331,6 +339,8 @@ section a {
     font-weight: 400;
 }
 
+/* Section */
+
 #about {
     background-color: var(--main-color-3);
 }
@@ -342,6 +352,8 @@ section a {
 #contact {
     background-color: var(--main-color-2);
 }
+
+/* About section */
 
 #about .skills-list {
     display: grid;
@@ -370,6 +382,8 @@ section a {
     line-height: 12px;
 }
 
+/* Contact me section */
+
 #contact .container {
     max-width: 600px;
     margin: 0px auto 100px;
@@ -392,20 +406,25 @@ section a {
     cursor: pointer;
     color: var(--main-color-1);
     padding: 1.25rem 1.75rem;
+    ;
     font-size: 16px;
     font-weight: bolder;
     font-family: var(--main-font);
     line-height: 1;
     text-decoration: none;
-    transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     margin-top: 50px;
+}
+
+#contact .container .email-link a {
+    padding: 1.25rem 1.75rem;
 }
 
 #contact .container .email-link:hover {
     background-color: var(--main-color-1);
 }
 
-#contact .container .email-link:hover > a {
+#contact .container .email-link:hover>a {
     color: var(--main-color-2);
 }
 
@@ -418,4 +437,209 @@ section a {
     content: "03.";
 }
 
-/*---------------------------*/
+/* Work section */
+
+#work .numbered-heading::before {
+    content: "02.";
+}
+
+#work .projects {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 0px 10px;
+    padding: 0px;
+    margin: 20px 0px 0px;
+    overflow: hidden;
+    list-style: none
+}
+
+#work .projects .card {
+    display: block;
+    max-height: 140px;
+}
+
+/*
+#work .projects .card .title {}
+
+#work .projects .card .description {}
+*/
+
+.cards-wrapper {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    padding: 4rem;
+    margin: 0 auto;
+}
+
+.card {
+    font-family: 'Heebo';
+    --bg-filter-opacity: 0.5;
+    background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
+    height: 18em;
+    width: 12em;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 1em;
+    padding: 1em;
+    /*margin: 2em;*/
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 5em -1em black;
+    transition: all, 0.5s;
+    position: relative;
+    overflow: hidden;
+    border: 10px solid #ccc;
+    text-decoration: none;
+}
+
+.card:hover {
+    transform: rotate(0);
+}
+
+.card h1 {
+    margin: 0;
+    font-size: 1.5em;
+    line-height: 1.2em;
+}
+
+.card p {
+    font-size: 0.75em;
+    font-family: 'Open Sans';
+    margin-top: 0.5em;
+    line-height: 2em;
+}
+
+.card .tags {
+    display: flex;
+}
+
+.card .tags .tag {
+    font-size: 0.75em;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 0.3rem;
+    padding: 0 0.5em;
+    margin-right: 0.5em;
+    line-height: 1.5em;
+    transition: all, 0.5s;
+}
+
+.card:hover .tags .tag {
+    background: #3c3163;
+    color: white;
+}
+
+.card .date {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0.75em;
+    padding: 1em;
+    line-height: 1em;
+    opacity: .8;
+}
+
+.card:before,
+.card:after {
+    content: '';
+    transform: scale(0);
+    transform-origin: top left;
+    border-radius: 50%;
+    position: absolute;
+    left: -50%;
+    top: -50%;
+    z-index: -5;
+    transition: all, 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.card:before {
+    background: #ddd;
+    width: 250%;
+    height: 250%;
+}
+
+.card:after {
+    background: white;
+    width: 200%;
+    height: 200%;
+}
+
+.card:hover {
+    color: #3c3163;
+}
+
+.card:hover:before,
+.card:hover:after {
+    transform: scale(1);
+}
+
+.card-grid-space .num {
+    font-size: 3em;
+    margin-bottom: 1.2rem;
+    margin-left: 1rem;
+}
+
+.info {
+    font-size: 1.2em;
+    display: flex;
+    padding: 1em 3em;
+    height: 3em;
+}
+
+.info img {
+    height: 3em;
+    margin-right: 0.5em;
+}
+
+.info h1 {
+    font-size: 1em;
+    font-weight: normal;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1285px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .info {
+        justify-content: center;
+    }
+
+    .card-grid-space .num {
+        margin-left: 0;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cards-wrapper {
+        padding: 4rem 2rem;
+    }
+
+    .card {
+        max-width: calc(100vw - 4rem);
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .info {
+        display: block;
+        text-align: center;
+    }
+
+    .info h1 {
+        margin: 0;
+    }
+}

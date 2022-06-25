@@ -11,3 +11,8 @@
     $behance = "https://www.behance.net/omarlamin";
     $codepen = "https://codepen.io/omarlamin01";
     $proemail = "contactomarlamine1@gmail.com";
+
+    //Projects links
+    $prj1 = "https://github.com/omarlamin01/";
+    $prj2 = "https://github.com/omarlamin01/";
+    $prj3 = "https://github.com/omarlamin01/";
