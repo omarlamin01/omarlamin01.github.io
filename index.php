@@ -120,7 +120,7 @@ require "import_setting.php";
                     </a>
                 </div>
             </div>
-            <a href="https://www.newline.co/courses/build-a-spotify-connected-app" aria-label="Course Link" class="cta" rel="noopener noreferrer" target="_blank">Show More</a>
+            <a id="show-link" href="https://www.newline.co/courses/build-a-spotify-connected-app" aria-label="Course Link" class="cta" rel="noopener noreferrer" target="_blank">Show More</a>
         </div>
     </section>
 

@@ -601,7 +601,7 @@ section a {
     font-weight: normal;
 }
 
-#work > a {
+#work #show-link {
     padding: 1.25rem 1.75rem;
     border: 2px solid var(--main-color-1);
     border-radius: 5px;
@@ -609,7 +609,7 @@ section a {
     background-color: transparent;
 }
 
-#work > a:hover {
+#work #show-link:hover {
     background-color: var(--main-color-1);
     color: var(--main-color-5);
 }
