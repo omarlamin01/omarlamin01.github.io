@@ -269,7 +269,7 @@ h2,
 h3 {
     margin: 0px 0px 10px;
     font-weight: 600;
-    color: #ccd6f6;
+    color: #3c3163;
     line-height: 1.1;
 }
 
@@ -599,6 +599,19 @@ section a {
 .info h1 {
     font-size: 1em;
     font-weight: normal;
+}
+
+#work > a {
+    padding: 1.25rem 1.75rem;
+    border: 2px solid var(--main-color-1);
+    border-radius: 5px;
+    margin-top: 25px;
+    background-color: transparent;
+}
+
+#work > a:hover {
+    background-color: var(--main-color-1);
+    color: var(--main-color-5);
 }
 
 /* MEDIA QUERIES */

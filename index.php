@@ -78,6 +78,7 @@ require "import_setting.php";
 
     <section id="work">
         <div class="container">
+            <h2 class="numbered-heading" data-sr-id="3" style="visibility: visible; opacity: 1; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transition: opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s, transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;">Some Things I’ve Built</h2>
             <div class="cards-wrapper">
                 <div class="card-grid-space">
                     <div class="num">01</div>
@@ -119,6 +120,7 @@ require "import_setting.php";
                     </a>
                 </div>
             </div>
+            <a href="https://www.newline.co/courses/build-a-spotify-connected-app" aria-label="Course Link" class="cta" rel="noopener noreferrer" target="_blank">Show More</a>
         </div>
     </section>
 
