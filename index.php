@@ -82,24 +82,26 @@ require "import_setting.php";
             <div class="cards-wrapper">
                 <div class="card-grid-space">
                     <div class="num">01</div>
-                    <a class="card" href="https://codetheweb.blog/2017/10/06/html-syntax/" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
+                    <a class="card" href="<?php echo $prj1_link; ?>" style="--bg-img: url(https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/html-syntax/cover.jpg)">
                         <div>
-                            <h1>HTML Syntax</h1>
-                            <p>The syntax of a language is how it works. How to actually write it. Learn HTML syntax…</p>
-                            <div class="date">6 Oct 2017</div>
+                            <h1><?php echo $prj1_title; ?></h1>
+                            <p><?php echo $prj1_description; ?></p>
+                            <div class="date"><?php echo $prj1_date; ?></div>
                             <div class="tags">
-                                <div class="tag">HTML</div>
+                                <div class="tag">PHP</div>
+                                <div class="tag">CSS</div>
+                                <div class="tag">JS</div>
                             </div>
                         </div>
                     </a>
                 </div>
                 <div class="card-grid-space">
                     <div class="num">02</div>
-                    <a class="card" href="https://codetheweb.blog/2017/10/09/basic-types-of-html-tags/" style="--bg-img: url('https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/basic-types-of-html-tags/cover.jpg')">
+                    <a class="card" href="<?php echo $prj2_link; ?>" style="--bg-img: url('https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/basic-types-of-html-tags/cover.jpg')">
                         <div>
-                            <h1>Basic types of HTML tags</h1>
-                            <p>Learn about some of the most common HTML tags…</p>
-                            <div class="date">9 Oct 2017</div>
+                            <h1><?php echo $prj2_title; ?></h1>
+                            <p><?php echo $prj2_description; ?></p>
+                            <div class="date"><?php echo $prj2_date; ?></div>
                             <div class="tags">
                                 <div class="tag">HTML</div>
                             </div>
@@ -108,11 +110,11 @@ require "import_setting.php";
                 </div>
                 <div class="card-grid-space">
                     <div class="num">03</div>
-                    <a class="card" href="https://codetheweb.blog/2017/10/14/links-images-about-file-paths/" style="--bg-img: url('https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/links-images-about-file-paths/cover.jpg')">
+                    <a class="card" href="<?php echo $prj3_link; ?>" style="--bg-img: url('https://images1-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&resize_w=1500&url=https://codetheweb.blog/assets/img/posts/links-images-about-file-paths/cover.jpg')">
                         <div>
-                            <h1>Links, images and about file paths</h1>
-                            <p>Learn how to use links and images along with file paths…</p>
-                            <div class="date">14 Oct 2017</div>
+                            <h1><?php echo $prj3_title; ?></h1>
+                            <p><?php echo $prj3_description; ?></p>
+                            <div class="date"><?php echo $prj3_date; ?></div>
                             <div class="tags">
                                 <div class="tag">HTML</div>
                             </div>

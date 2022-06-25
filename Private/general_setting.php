@@ -12,7 +12,24 @@
     $codepen = "https://codepen.io/omarlamin01";
     $proemail = "contactomarlamine1@gmail.com";
 
-    //Projects links
-    $prj1 = "https://github.com/omarlamin01/";
-    $prj2 = "https://github.com/omarlamin01/";
-    $prj3 = "https://github.com/omarlamin01/";
+    //Highlighted projects
+
+    //links
+    $prj1_link = "https://github.com/abdellatif-laghjaj/Ivenontory-managment-system";
+    $prj2_link = "https://github.com/omarlamin01/";
+    $prj3_link = "https://github.com/omarlamin01/";
+
+    //titles
+    $prj1_title = "TexGear";
+    $prj2_title = "Project will be published soon";
+    $prj3_title = "another project";
+
+    //descriptions
+    $prj1_description = "An Online Tech Store, website and inventory managment system build with Html, CSS, JS, PHP and MySQL";
+    $prj2_description = "a project will be published soon";
+    $prj3_description = "another project that will be published soon";
+
+    //dates
+    $prj1_date = "8 Apr 2022";
+    $prj2_date = "25 Jun 2022";
+    $prj3_date = "25 Jun 2022";

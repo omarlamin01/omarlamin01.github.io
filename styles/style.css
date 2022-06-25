@@ -443,19 +443,8 @@ section a {
     content: "02.";
 }
 
-#work .projects {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    gap: 0px 10px;
-    padding: 0px;
-    margin: 20px 0px 0px;
-    overflow: hidden;
-    list-style: none
-}
-
-#work .projects .card {
-    display: block;
-    max-height: 140px;
+#work .container {
+    padding: 25px;
 }
 
 /*
@@ -470,8 +459,7 @@ section a {
     align-items: center;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
-    padding: 4rem;
-    margin: 0 auto;
+    padding: 0 2rem 6rem 2rem;
 }
 
 .card {
@@ -484,7 +472,6 @@ section a {
     color: white;
     border-radius: 1em;
     padding: 1em;
-    /*margin: 2em;*/
     display: flex;
     align-items: flex-end;
     background-size: cover;
@@ -582,23 +569,6 @@ section a {
     font-size: 3em;
     margin-bottom: 1.2rem;
     margin-left: 1rem;
-}
-
-.info {
-    font-size: 1.2em;
-    display: flex;
-    padding: 1em 3em;
-    height: 3em;
-}
-
-.info img {
-    height: 3em;
-    margin-right: 0.5em;
-}
-
-.info h1 {
-    font-size: 1em;
-    font-weight: normal;
 }
 
 #work #show-link {
