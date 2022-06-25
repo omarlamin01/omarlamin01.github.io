@@ -585,7 +585,12 @@ section a {
 }
 
 /* MEDIA QUERIES */
-@media screen and (max-width: 1285px) {
+
+@media all and (max-width: 1285px) {
+    section {
+        height: auto;
+    }
+
     .cards-wrapper {
         grid-template-columns: 1fr 1fr;
     }
