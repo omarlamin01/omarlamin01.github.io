@@ -594,6 +594,110 @@ section a {
     .cards-wrapper {
         grid-template-columns: 1fr 1fr;
     }
+
+    #contact .container {
+        margin-bottom: 0;
+    }
+}
+
+@media all and (max-width: 900px) {
+    footer {
+        height: auto;
+        background-color: var(--main-color-4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+
+    .right {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: auto;
+        height: auto;
+        z-index: 1;
+        transform: rotate(-90deg);
+    }
+
+    .email {
+        display: block;
+        -webkit-box-align: center;
+        align-items: center;
+        margin: 10px;
+        padding: 10px;
+        list-style: none;
+        color: #a8b2d1;
+    }
+
+    .email::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+    }
+
+    .left {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: auto;
+        height: auto;
+
+        z-index: 1;
+    }
+
+    .socials {
+        display: flex;
+        flex-direction: row;
+        -webkit-box-align: center;
+        align-items: center;
+        margin: 10px;
+        padding: 10px;
+        list-style: none;
+        color: #a8b2d1;
+    }
+
+    .socials::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+    }
+
+    .socials li {
+        display: list-item;
+        text-align: -webkit-match-parent;
+        margin-top: 5px;
+    }
+
+    .socials li:last-of-type {
+        margin-bottom: 0px;
+    }
+
+    .socials li:hover {
+        color: white;
+        transform: translateY(-3px);
+    }
+
+    .socials li a {
+        display: inline-block;
+        text-decoration: none;
+        text-decoration-skip-ink: auto;
+        color: inherit;
+        position: relative;
+        transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        padding: 20px;
+    }
+
+    .socials li a svg {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 @media screen and (max-width: 900px) {
