@@ -24,19 +24,19 @@ require "import_setting.php";
             </div>
             <div id="links">
                 <ul>
-                    <li><a href="#about">About me</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li class="nav-link"><a href="#about">About me</a></li>
+                    <li class="nav-link"><a href="#work">Work</a></li>
+                    <li class="nav-link"><a href="#contact">Contact</a></li>
                 </ul>
                 <button>
                     <title>CV</title>
                     <a href="res/lamine-omar-cv.pdf">Resume</a>
                 </button>
             </div>
-            <div class="toggle menu">
-                <div class="one"></div>
-                <div class="two"></div>
-                <div class="three"></div>
+            <div class="toggle">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
             </div>
         </nav>
         <div class="hello">
@@ -128,7 +128,7 @@ require "import_setting.php";
                 </div>
             </div>
             <div id="show-link">
-            <a href="https://www.newline.co/courses/build-a-spotify-connected-app" aria-label="Course Link" rel="noopener noreferrer" target="_blank">Show More</a>
+            <a href="all-projects.php" aria-label="Course Link" rel="noopener noreferrer" target="_blank">Show More</a>
             </div>
         </div>
     </section>
@@ -203,6 +203,29 @@ require "import_setting.php";
             </ul>
         </div>
     </footer>
+
+    <script>
+
+        var toggle_button = document.getElementsByClassName('toggle')[0];
+        var links = document.getElementById('links');
+        var body = document.body;
+        var nav_links = document.getElementsByClassName("nav-link");
+
+        toggle_button.addEventListener("click" , function(evt) {
+            toggle_button.classList.toggle('open');
+            links.classList.toggle('show');
+            body.classList.toggle('no-scroll')
+        })
+
+        for(var i = 0; i < nav_links.length; i++) {
+            nav_links[i].addEventListener("click" , function(evt) {
+            toggle_button.classList.toggle('open');
+            links.classList.toggle('show');
+            body.classList.toggle('no-scroll')
+        })
+        }
+
+    </script>
 </body>
 
 </html>
