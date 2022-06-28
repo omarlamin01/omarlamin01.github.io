@@ -33,6 +33,11 @@ require "import_setting.php";
                     <a href="res/lamine-omar-cv.pdf">Resume</a>
                 </button>
             </div>
+            <div class="toggle menu">
+                <div class="one"></div>
+                <div class="two"></div>
+                <div class="three"></div>
+            </div>
         </nav>
         <div class="hello">
             <div style="transition-delay: 100ms;">
@@ -122,7 +127,9 @@ require "import_setting.php";
                     </a>
                 </div>
             </div>
-            <a id="show-link" href="https://www.newline.co/courses/build-a-spotify-connected-app" aria-label="Course Link" rel="noopener noreferrer" target="_blank">Show More</a>
+            <div id="show-link">
+            <a href="https://www.newline.co/courses/build-a-spotify-connected-app" aria-label="Course Link" rel="noopener noreferrer" target="_blank">Show More</a>
+            </div>
         </div>
     </section>
 

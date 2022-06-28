@@ -125,6 +125,10 @@ header button a {
     color: var(--main-color-1);
 }
 
+.toggle {
+    display: none;
+}
+
 /* Sides links */
 
 .right {
@@ -301,9 +305,8 @@ h3 {
 /*--------------------------------------------*/
 
 section .container {
-    max-width: 900px;
     padding: 100px 0;
-    margin: 0 auto;
+    margin: 0 80px;
 }
 
 section p {
@@ -347,6 +350,8 @@ section a {
 
 #work {
     background-color: var(--main-color-5);
+    height: auto;
+    min-height: 100vh;
 }
 
 #contact {
@@ -463,7 +468,7 @@ section a {
 }
 
 .card {
-    font-family: 'Heebo';
+    font-family: var(--main-font);
     --bg-filter-opacity: 0.5;
     background-image: linear-gradient(rgba(0, 0, 0, var(--bg-filter-opacity)), rgba(0, 0, 0, var(--bg-filter-opacity))), var(--bg-img);
     height: 18em;
@@ -572,15 +577,22 @@ section a {
 }
 
 #work #show-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#work #show-link a {
     padding: 1.25rem 1.75rem;
-    border: 2px solid var(--main-color-1);
+    color: #3c3163;
+    font-weight: bolder;
+    border: 2px solid #3c3163;
     border-radius: 5px;
-    margin-top: 25px;
     background-color: transparent;
 }
 
-#work #show-link:hover {
-    background-color: var(--main-color-1);
+#work #show-link a:hover {
+    background-color: #3c3163;
     color: var(--main-color-5);
 }
 
@@ -619,6 +631,12 @@ section a {
         height: auto;
         z-index: 1;
         transform: rotate(-90deg);
+    }
+
+    .right:hover .email a {
+        color: white;
+        font-size: 12px;
+        line-height: 18px;
     }
 
     .email {
@@ -698,20 +716,26 @@ section a {
         width: 30px;
         height: 30px;
     }
-}
 
-@media screen and (max-width: 900px) {
     .cards-wrapper {
         grid-template-columns: 1fr;
     }
 
-    .info {
+    .card-grid-space {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
     }
 
     .card-grid-space .num {
         margin-left: 0;
         text-align: center;
+    }
+
+    /*    */
+    .toggle {
+        display: block;
     }
 }
 
