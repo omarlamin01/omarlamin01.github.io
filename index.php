@@ -1,11 +1,25 @@
 <?php
-require "import_setting.php";
+    include "private/bookmark.php";
 
-//get visitors data
-$vis_ip = getUserIP();
+    //get visitors data
+    $vis_ip = getVisIpAddr();
 
-$ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$vis_ip));
+    $api_key = "f538e982897e48af8238f0afc7ca2b80";
 
+    // create curl resource
+    $ch = curl_init();
+
+    // set url
+    curl_setopt($ch, CURLOPT_URL, "https://api.ipgeolocation.io/ipgeo?apiKey=".$api_key."&ip=102.78.19.243");
+
+    //return the transfer as a string
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+
+    // $output contains the output string
+    $output = curl_exec($ch);
+
+    // close curl resource to free up system resources
+    curl_close($ch);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -152,14 +166,25 @@ $ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$
 
     <section>
         <?php
-            echo 'country name: ' . $ipdat->geoplugin_countryName . "\n";
-            echo 'city name: ' . $ipdat->geoplugin_city . "\n";
-            echo 'continent name: ' . $ipdat->geoplugin_continentName . "\n";
-            echo 'latitude name: ' . $ipdat->geoplugin_latitude . "\n";
-            echo 'longitude name: ' . $ipdat->geoplugin_longitude . "\n";
-            echo 'currency symbol: ' . $ipdat->geoplugin_currencySymbol . "\n";
-            echo 'currency code: ' . $ipdat->geoplugin_currencyCode . "\n";
-            echo 'Timezone: ' . $ipdat->geoplugin_timezone . "\n";
+            echo "your ip: " . UserInfo::get_ip() . "<br>";
+            echo "your os: " . UserInfo::get_os() . "<br>";
+            echo "your browser: " . UserInfo::get_browser() . "<br>";
+            echo "your device type: " . UserInfo::get_device() . "<br>";
+        /*
+            echo ip_info("Visitor", "Country") . "<br>"; // India
+            echo ip_info("Visitor", "Country Code") . "<br>"; // IN
+            echo ip_info("Visitor", "State") . "<br>"; // Andhra Pradesh
+            echo ip_info("Visitor", "City") . "<br>"; // Proddatur
+            echo ip_info("Visitor", "Address") . "<br>"; // Proddatur, Andhra Pradesh, India
+
+            print_r(ip_info("Visitor", "Location")) . "<br>"; // Array ( [city] => Proddatur [state] => Andhra Pradesh [country] => India [country_code] => IN [continent] => Asia [continent_code] => AS )
+        */
+            $user_data = @json_decode($output);
+            echo "<br>";
+            echo "Country name: " . $user_data->country_name . "<br>";
+            echo "Region name: " . $user_data->state_prov . "<br>";
+            echo "City name: " . $user_data->city . "<br>";
+            echo "Service provider: " . $user_data->isp . "<br>";
         ?>
     </section>
 
