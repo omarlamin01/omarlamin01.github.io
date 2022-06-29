@@ -615,6 +615,11 @@ section a {
 }
 
 @media all and (max-width: 900px) {
+
+    header {
+        height: auto;
+    }
+
     footer {
         height: auto;
         background-color: var(--main-color-4);
@@ -749,7 +754,7 @@ section a {
         width: 35px;
         height: 4px;
         background-color: var(--main-color-1);
-        transition: all 0.3s;
+        transition: all 0.5s;
         backface-visibility: hidden;
     }
 
@@ -796,7 +801,7 @@ section a {
         bottom: 0;
         right: 0;
         left: 0;
-        transition: all ease-in-out 0.3s;
+        transition: all 0.5s;
     }
 
     #links.show ul {
@@ -824,7 +829,8 @@ section a {
     }
 }
 
-@media screen and (max-width: 500px) {
+
+@media all and (max-width: 600px) {
     .cards-wrapper {
         padding: 4rem 2rem;
     }
@@ -832,15 +838,99 @@ section a {
     .card {
         max-width: calc(100vw - 4rem);
     }
+
+    .hello {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0px auto;
+        padding: 0 60px;
+        max-width: 1000px;
+    }
+
+    section .container {
+        padding: 60px 0;
+        margin: 0 60px;
+    }
+
+    section p {
+        margin: 20px 0;
+        font-size: 18px;
+        max-width: 540px;
+        color: var(--main-color-4);
+    }
+
+    #contact p {
+        margin: 20px 60px;
+        max-width: 100%;
+        width: auto;
+    }
+
+    #work .container {
+        padding: 25px 0;
+    }
+    
+    .hello h1,
+    h2,
+    h3 {
+        margin: 0px 0px 10px;
+        font-weight: 600;
+        color: #3c3163;
+        line-height: 1;
+    }
+    
+    .hello .intro {
+        margin: 0px 0px 30px 4px;
+        color: var(--main-color-1);
+        font-family: var(--main-font);
+        font-size: 16px;
+        font-weight: 400;
+    }
+    
+    .hello .my-name {
+        margin: 0px;
+        font-size: 40px;
+    }
+    
+    .hello .job {
+        margin: 0px;
+        font-size: 40px;
+    }
+    
+    .hello p {
+        margin-top: 20px;
+        font-size: 20px;
+        max-width: 540px;
+        color: var(--main-color-4);
+    }
+    
+    .numbered-heading {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+        margin: 10px 0px 40px;
+        width: 100%;
+        height: auto;
+        font-size: 24px;
+        white-space: nowrap;
+        counter-reset: section 0;
+    }
+    
+    .numbered-heading::before {
+        position: relative;
+        counter-increment: section 1;
+        content: "0" counter(section) ".";
+        margin-right: 10px;
+        color: var(--main-color-1);
+        font-family: var(--main-font);
+        font-weight: 400;
+    }
 }
 
-@media screen and (max-width: 450px) {
-    .info {
-        display: block;
-        text-align: center;
-    }
-
-    .info h1 {
-        margin: 0;
-    }
+@media all and (max-width: 450px) {
+    
 }
