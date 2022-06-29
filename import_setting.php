@@ -1,2 +1,2 @@
 <?php 
-    include "private/general_setting.php";
+    include "private/bookmark.php";

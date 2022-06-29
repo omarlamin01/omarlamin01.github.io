@@ -1,5 +1,11 @@
 <?php
 require "import_setting.php";
+
+//get visitors data
+$vis_ip = getUserIP();
+
+$ipdat = @json_decode(file_get_contents("http://www.geoplugin.net/json.gp?ip=".$vis_ip));
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -142,6 +148,19 @@ require "import_setting.php";
                 <a href="mailto:<?php echo $proemail; ?>" rel="noopener noreferrer" target="_blank">Say Hello</a>
             </button>
         </div>
+    </section>
+
+    <section>
+        <?php
+            echo 'country name: ' . $ipdat->geoplugin_countryName . "\n";
+            echo 'city name: ' . $ipdat->geoplugin_city . "\n";
+            echo 'continent name: ' . $ipdat->geoplugin_continentName . "\n";
+            echo 'latitude name: ' . $ipdat->geoplugin_latitude . "\n";
+            echo 'longitude name: ' . $ipdat->geoplugin_longitude . "\n";
+            echo 'currency symbol: ' . $ipdat->geoplugin_currencySymbol . "\n";
+            echo 'currency code: ' . $ipdat->geoplugin_currencyCode . "\n";
+            echo 'Timezone: ' . $ipdat->geoplugin_timezone . "\n";
+        ?>
     </section>
 
     <footer>
