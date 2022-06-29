@@ -671,7 +671,6 @@ section a {
         bottom: auto;
         width: auto;
         height: auto;
-
         z-index: 1;
     }
 
@@ -879,7 +878,7 @@ section a {
         margin: 0px 0px 10px;
         font-weight: 600;
         color: #3c3163;
-        line-height: 1;
+        line-height: 2;
     }
     
     .hello .intro {
@@ -932,5 +931,56 @@ section a {
 }
 
 @media all and (max-width: 450px) {
+    .numbered-heading {
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        position: relative;
+        margin: 10px 0px 40px;
+        width: 100%;
+        height: auto;
+        font-size: 18px;
+        white-space: nowrap;
+        counter-reset: section 0;
+    }
     
+    .numbered-heading::before {
+        position: relative;
+        counter-increment: section 1;
+        content: "0" counter(section) ".";
+        margin-right: 5px;
+        color: var(--main-color-1);
+        font-family: var(--main-font);
+        font-weight: 400;
+    }
+
+    section p {
+        margin: 20px 0;
+        font-size: 14px;
+        max-width: 540px;
+        color: var(--main-color-4);
+    }
+
+    .card {
+        width: 8em;
+        height: 14em;
+    }
+
+    .socials li {
+        margin-top: 0;
+    }
+
+    .socials li a {
+        padding: 8px;
+    }
+
+    .socials {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .socials li a svg {
+        width: 20px;
+        height: 20px;
+    }
 }
