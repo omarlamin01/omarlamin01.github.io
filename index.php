@@ -10,7 +10,7 @@
     $ch = curl_init();
 
     // set url
-    curl_setopt($ch, CURLOPT_URL, "https://api.ipgeolocation.io/ipgeo?apiKey=".$api_key."&ip=102.78.19.243");
+    curl_setopt($ch, CURLOPT_URL, "https://api.ipgeolocation.io/ipgeo?apiKey=".$api_key."&ip=102.78.233.144");
 
     //return the transfer as a string
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
@@ -170,15 +170,15 @@
             echo "your os: " . UserInfo::get_os() . "<br>";
             echo "your browser: " . UserInfo::get_browser() . "<br>";
             echo "your device type: " . UserInfo::get_device() . "<br>";
-        /*
-            echo ip_info("Visitor", "Country") . "<br>"; // India
-            echo ip_info("Visitor", "Country Code") . "<br>"; // IN
-            echo ip_info("Visitor", "State") . "<br>"; // Andhra Pradesh
-            echo ip_info("Visitor", "City") . "<br>"; // Proddatur
-            echo ip_info("Visitor", "Address") . "<br>"; // Proddatur, Andhra Pradesh, India
-
+        
+            echo "<br>";
+            echo "Country name: " . ip_info("Visitor", "Country") . "<br>"; // India
+            echo "Country code: " . ip_info("Visitor", "Country Code") . "<br>"; // IN
+            echo "State name: " . ip_info("Visitor", "State") . "<br>"; // Andhra Pradesh
+            echo "City name: " . ip_info("Visitor", "City") . "<br>"; // Proddatur
+            echo "Visitor address" . ip_info("Visitor", "Address") . "<br>"; // Proddatur, Andhra Pradesh, India
             print_r(ip_info("Visitor", "Location")) . "<br>"; // Array ( [city] => Proddatur [state] => Andhra Pradesh [country] => India [country_code] => IN [continent] => Asia [continent_code] => AS )
-        */
+    
             $user_data = @json_decode($output);
             echo "<br>";
             echo "Country name: " . $user_data->country_name . "<br>";
